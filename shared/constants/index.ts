@@ -1,0 +1,41 @@
+// Shared constants for the Encrypted Dutch Auction Hook
+
+export const CONTRACT_ADDRESSES = {
+  // Mainnet addresses would go here
+  LOCAL: {
+    hook: '0x0000000000000000000000000000000000000000',
+    poolManager: '0x0000000000000000000000000000000000000001',
+  },
+  SEPOLIA: {
+    hook: '0x0000000000000000000000000000000000000000',
+    poolManager: '0x0000000000000000000000000000000000000001',
+  }
+} as const;
+
+export const AUCTION_CONSTANTS = {
+  MIN_AUCTION_DURATION: 300, // 5 minutes
+  MAX_AUCTION_DURATION: 86400, // 24 hours
+  MIN_START_PRICE: 1,
+  MAX_START_PRICE: 1000000,
+  MIN_FLOOR_PRICE: 1,
+  MAX_FLOOR_PRICE: 100000,
+  MIN_DECAY_RATE: 1,
+  MAX_DECAY_RATE: 10000,
+} as const;
+
+export const FHE_CONSTANTS = {
+  ENCRYPTION_SCHEME: 'BFV',
+  PLAINTEXT_MODULUS: '340282366920938463463374607431768211507',
+  ENCRYPTION_CONTEXT: 'default',
+} as const;
+
+export const TIME_CONSTANTS = {
+  BLOCK_TIME: 12, // seconds
+  MS_PER_SECOND: 1000,
+} as const;
+
+export const UI_CONSTANTS = {
+  REFRESH_INTERVAL: 10000, // 10 seconds
+  TX_POLLING_INTERVAL: 5000, // 5 seconds
+  NOTIFICATION_DURATION: 5000, // 5 seconds
+} as const;
