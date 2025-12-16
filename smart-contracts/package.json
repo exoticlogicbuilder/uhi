@@ -1,0 +1,29 @@
+{
+  "name": "encrypted-dutch-auction-hook",
+  "version": "1.0.0",
+  "description": "Encrypted Dutch Auction Hook for Uniswap v4",
+  "main": "index.js",
+  "scripts": {
+    "build": "forge build",
+    "clean": "forge clean",
+    "test": "forge test",
+    "test-coverage": "forge coverage",
+    "deploy:sepolia": "forge script script/Deploy.s.sol:DeployScript --rpc-url sepolia --broadcast",
+    "deploy:local": "forge script script/Deploy.s.sol:DeployScript --rpc-url localhost --broadcast"
+  },
+  "dependencies": {
+    "@uniswap/v4-core": "^1.0.0",
+    "@uniswap/v4-periphery": "^1.0.0",
+    "@openzeppelin/contracts": "^5.0.0",
+    "fhevm": "^0.4.0",
+    "fhevmjs": "^0.4.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.0",
+    "forge-std": "^1.7.0"
+  },
+  "keywords": ["uniswap", "v4", "hook", "fhe", "homomorphic", "encryption", "dutch", "auction", "defi"],
+  "author": "Encrypted Dutch Auction Hook Team",
+  "license": "MIT"
+}
